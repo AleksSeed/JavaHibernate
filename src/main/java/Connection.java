@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-
 public class Connection {
 
     public static Properties loadProperties(String resourceFileName) throws IOException {
@@ -33,5 +32,4 @@ public class Connection {
         }
         return connection;
     }
-
 }

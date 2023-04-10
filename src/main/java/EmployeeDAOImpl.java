@@ -5,7 +5,6 @@ import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
-
     @Override
     public void create(Employee employee, EntityManager entityManager) {
         entityManager.getTransaction().begin();
@@ -27,8 +26,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
        return employees;
    }
 
-   @Override
+    @Override
     public void updateById(int id, Employee employee, EntityManager entityManager) {
+    }
+
+    @Override
+    public void updateById(Employee employee, EntityManager entityManager) {
        entityManager.getTransaction().begin();
        entityManager.merge(employee);
        entityManager.getTransaction().commit();

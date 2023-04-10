@@ -11,5 +11,7 @@ public interface EmployeeDAO {
 
     void updateById(int id, Employee employee, EntityManager entityManager);
 
+    void updateById(Employee employee, EntityManager entityManager);
+
     void deleteById(int id, EntityManager entityManager);
 }
